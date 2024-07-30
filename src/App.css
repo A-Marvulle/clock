@@ -1,38 +1,105 @@
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: #f0f0f0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
+.title {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.break-session-length {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.break-session-length > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  background-color: #007BFF;
+  color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  margin: 5px;
+  cursor: pointer;
+  font-size: large;
+}
+.up, .down{
+  padding: 10px 20px
+}
+button:disabled {
+  background-color: #747373;
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+}
+
+#break-label, #session-label, #timer-label {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#break-length, #session-length, #time-left {
+  font-size: 2em;
+}
+
+.timer-wrapper {
+  margin-bottom: 20px;
+}
+
+#start_stop, #reset {
+  margin-top: 20px;
+  width: 100px;
+  padding: 10px;
+}
+
+#reset {
+background-color: #DC3545;
+}
+
+#start_stop {
+  margin-right: 10px;
+  text-align: center;
+  
+}
+.play{
+  background-color: #28A745;
+}
+.play.active {
+  background-color: #17A2B8;
+}
+
+@media (max-width: 800px) {
+  .break-session-length {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .break-session-length > div {
+    margin-bottom: 20px;
   }
 }
